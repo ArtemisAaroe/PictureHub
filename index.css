@@ -1,16 +1,12 @@
-a {
-    height: 100%;
-    width: 100%;
-}
 /* picture page  */
 
 #fullscreen {
+    /* background-color: blue;   */
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;  
     overflow: hidden;
     margin: 0px;
          
@@ -65,7 +61,7 @@ a {
 }
 
 #left-picture {
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 100vh;
     width: 10vw;
     position: absolute;
@@ -73,9 +69,37 @@ a {
 }
 
 #right-picture {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     height: 100vh;
     width: 10vw;
     position: absolute;
     right: 0px;
+}
+
+.side-arrow {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;     
+    display: block;
+}
+
+#right-picture a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#left-picture a {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+}
+
+#back-to-gallery {
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+
 }
