@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{thisEvent.name}}</title>
+  <link rel="stylesheet" href="../../index.css" />
+  <link rel="icon" type="image/x-icon" href="../../icons/catAndMoon.png">
+</head>
+<body>
+  <div id="menu">
+	<a href="{{hompagePath}}"
+	  class="menu-item">
+	  <img src="../../icons/home.svg" 
+		id="home-icon"
+		class="icon"
+		alt="Home">
+	</a>
+
+	{%for event in events%}
+	<a href="{{event.html}}"
+	  class="menu-item">
+	  <h3>{{event.name}}</h3>
+	</a>
+	{%endfor%}
+
+  </div>
+
+  <div id="list-view">
+	<h1>thisEvent.name</h1>
+	{%for scene in scenes%}
+	<a href="{{scene.html}}"
+	  class="list-view-item">
+	  <h2>{{scene.name}}</h2>
+	  <img src="{{scene.image}}" 
+		alt="go to scene">
+	  {%for text in scene.texts%}
+	  <p>{{text}}</p>
+	  {%endfor%}
+	</a>
+	{%endfor%}
+  </div>
+</body>
+</html>

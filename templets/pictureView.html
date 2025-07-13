@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{filename}}</title>
+	<link rel="stylesheet" href="../../../../index.css" />
+	<link rel="icon" type="image/x-icon" href="../../../../icons/catAndMoon.png">
+
+</head>
+<body class="fullscreen">
+	<input type="checkbox" id="keep-ui-visible" hidden>
+	<label for="keep-ui-visible"
+		class="fullscreen">
+		<img src="{{imageFilepath}}"
+			id="fullscreen-picture">
+	</label>
+  
+	<nav id="picture-menu">
+		<a href="{{sceanPath}}"
+            class="picture-menu-item"
+            style="width: 100%;">
+            <img src="../../../../icons/backArrow.svg" 
+                alt="back to gallery"
+                title="back-to-gallery">
+		</a>
+		
+		<a href="{{imageFilepath}}"
+            class="picture-menu-item">
+                <h3>full size</h3>
+		</a>
+		
+		<div class="picture-menu-item">
+            <a href="{{neighborImages.4.html}}">
+                <img src="../../../../icons/leftArrow.svg" 
+                class="icon"
+                alt="left picture"
+                title="Left picture">
+            </a>
+            
+            <a href="{{neighborImages.6.html}}">
+                <img src="../../../../icons/rightArrow.svg"
+                class="icon"
+                alt="right picture"
+                title="Right picture">
+            </a>
+		</div> 
+	</nav>
+
+	<div id="left-picture"
+		class="hit-box">
+		<a href="{{neighborImages.4.html}}">
+            <img src="../../../../icons/leftArrow.svg" 
+                class="icon"
+                alt="left picture"
+                title="Left picture">
+		</a>
+	</div>
+		
+	<div id="right-picture"
+		class="hit-box">
+		<a href="{{neighborImages.6.html}}">
+			<img src="../../../../icons/rightArrow.svg"
+				class="icon"
+				alt="right picture"
+				title="Right picture">
+		</a>
+	</div>
+
+	<div id="bottom-showcase"
+		class="hit-box">
+		<div class="bottom-showcase-image-container">
+		{%for image in neighborImages%}
+		<a href="{{image.html}}">
+			<img src="{{image.path}}" 
+			class="bottom-showcase-image"
+			alt="go to image"
+			title="Go to image">
+		</a>
+        {{%endfor%}}
+	</div>
+</body>
+</html>
